@@ -1,23 +1,20 @@
+
+
+
 public class Palindrome {
-    static void main() {
-        System.out.println("welcome to polindrome checkerApp");
-        System.out.println("version 1.0");
-        System.out.println("system initialised");
-
-
-        public class UseCase2PalindromeCheckerApp {
 
             public static void main(String[] args) {
 
-                // Hardcoded string to check
-                String word = "madam";
+                // Original string
+                String word = "racecar";
 
-                // Reverse the string manually
+                // Reverse the string using loop
                 String reversed = "";
                 for (int i = word.length() - 1; i >= 0; i--) {
-                    reversed += word.charAt(i);
+                    reversed += word.charAt(i);  // String concatenation
                 }
 
+                // Compare original and reversed
                 if (word.equals(reversed)) {
                     System.out.println(word + " is a palindrome.");
                 } else {
@@ -25,5 +22,5 @@ public class Palindrome {
                 }
             }
         }
-    }
-}
+
+
