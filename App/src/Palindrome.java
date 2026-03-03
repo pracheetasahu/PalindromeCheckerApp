@@ -2,18 +2,22 @@ import java.util.Scanner;
 
 class PalindromeChecker {
 
-    // Encapsulated method
+    // Encapsulated palindrome logic
     public boolean checkPalindrome(String input) {
 
-        int start = 0;
-        int end = input.length() - 1;
+        if (input == null) {
+            return false;
+        }
 
-        while (start < end) {
-            if (input.charAt(start) != input.charAt(end)) {
+        int left = 0;
+        int right = input.length() - 1;
+
+        while (left < right) {
+            if (input.charAt(left) != input.charAt(right)) {
                 return false;
             }
-            start++;
-            end--;
+            left++;
+            right--;
         }
 
         return true;
@@ -25,12 +29,10 @@ public class Palindrome {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter a string:");
-        String input = scanner.nextLine();
-
-        // Create object of service class
         PalindromeChecker checker = new PalindromeChecker();
+
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
 
         boolean result = checker.checkPalindrome(input);
 
